@@ -5,20 +5,24 @@ import calc
 class TestCalc(unittest.TestCase):
 
  def test_add(self):
-     add_result = calc.add(10,5)
-     self.assertEqual(add_result, 15)
+     self.assertEqual(calc.add(15,20),35)
+     self.assertEqual(calc.add(10,5),15)
+     self.assertEqual(calc.add(6,37),43)
 
  def test_substract(self):
-     substract_result = calc.substract(30,2)
-     self.assertEqual(substract_result, 15)
+     self.assertEqual(calc.substract(25,20),5)
+     self.assertEqual(calc.substract(10,10),0)
+     self.assertEqual(calc.substract(13,50),-37)
 
  def test_divide(self):
-     divide_result = calc.divide(20,5)
-     self.assertEqual(divide_result, 4)
+     self.assertEqual(calc.divide(20,20),1)
+     self.assertEqual(calc.divide(40,5),8)
+     self.assertEqual(calc.divide(50,25),2)
 
  def test_multiply(self):
-     multiply_result = calc.multiply(2,10)
-     self.assertEqual(multiply_result, 60)
+     self.assertEqual(calc.multiply(10,20),200)
+     self.assertEqual(calc.multiply(13,3),39)
+     self.assertEqual(calc.multiply(5,5),25)
 
 if __name__ == "__main__":
     if __name__ == '__main__':
