@@ -19,6 +19,8 @@ class TestCalc(unittest.TestCase):
      self.assertEqual(calc.divide(40,5),8)
      self.assertEqual(calc.divide(50,25),2)
 
+     self.assertRaises(ValueError,calc.divide,25,0)
+     
  def test_multiply(self):
      self.assertEqual(calc.multiply(10,20),200)
      self.assertEqual(calc.multiply(13,3),39)
